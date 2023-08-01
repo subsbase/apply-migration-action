@@ -2,25 +2,20 @@ name: 'Apply Migration '
 description: 'Get started with Container actions'
 author: 'GitHub'
 inputs: 
-  Poject_Name:
-    description: 'Enter the Project Name to apply Migration for it'
-  DB_Name:
-    description: 'Enter the Name of the Database'
-  DB_HOST:
-    description: 'Enter The Host URL for the Database '
-  DB_USER:
-    description: 'Enter The Username for the Database '
-  DB_PASSWORD:
-    description: 'Enter The Password for the Database '
-  DB_PORT:
-    description: 'Enter The Port number for the Database '
+  DB_Poject_Path:
+    description: 'Enter The Path For The Data Project'
+  Startup_Project_Path:
+    description: 'Enter The Path For The Startup Project '
+  DB_Context:
+    description: 'Enter The Name of the DB Context'
+  DB_Connection_String:
+    description: 'Enter The Database Connection String'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.Poject_Name }}
-    - ${{ inputs.DB_Name }}
-    - ${{ inputs.DB_HOST }}
-    - ${{ inputs.DB_USER }}
-    - ${{ inputs.DB_PASSWORD }}
-    - ${{ inputs.DB_PORT }}
+    - ${{ inputs.DB_Poject_Path }}
+    - ${{ inputs.Startup_Project_Path }}
+    - ${{ inputs.DB_Context }}
+    - ${{ inputs.DB_Connection_String }}
+ 
