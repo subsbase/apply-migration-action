@@ -2,7 +2,7 @@ name: 'Apply Migration '
 description: 'Get started with Container actions'
 author: 'GitHub'
 inputs: 
-  DB_Poject_Path:
+  DB_Project_Path:
     description: 'Enter The Path For The Data Project'
   Startup_Project_Path:
     description: 'Enter The Path For The Startup Project '
@@ -14,7 +14,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.DB_Poject_Path }}
+    - ${{ inputs.DB_Project_Path }}
     - ${{ inputs.Startup_Project_Path }}
     - ${{ inputs.DB_Context }}
     - ${{ inputs.DB_Connection_String }}
