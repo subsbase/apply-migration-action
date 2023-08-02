@@ -6,6 +6,8 @@ db_conn_str=$4
 
 echo $(ls /github/workspace/ | grep "Services")
 
+export PATH="$PATH:/root/.dotnet/tools"
+
 dotnet ef database update \
 --project /github/workspace/$db_project_path \
 --startup-project /github/workspace/$startup_project_path \
