@@ -10,4 +10,4 @@ dotnet ef database update \
 --project /github/workspace/$db_project_path \
 --startup-project /github/workspace/$startup_project_path \
 --context $db_context \
---connection $db_conn_str
+--connection "$db_conn_str"
