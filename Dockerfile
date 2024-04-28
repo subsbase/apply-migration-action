@@ -1,6 +1,6 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine
+FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine
 
-RUN dotnet tool install --global dotnet-ef --version 6.0.11
+RUN dotnet tool install --global dotnet-ef --version 8.0.4
 
 COPY LICENSE README.md /
 
